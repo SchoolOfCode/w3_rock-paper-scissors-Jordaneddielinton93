@@ -114,15 +114,28 @@ main{
     "box1 box1 box2 box2"
     "box3 box4 box4 box5";
     &--popup{
-      width: 400px;
+      width: 800px;
+      height: 200px;
       position: absolute;
       left: 50%;
       bottom: 20%;
-      margin-left: -200px;
+      margin-left: -400px;
       @include flex();
       flex-direction:column;
       z-index: 2;
       background-color: white;
+      #nametag{
+        text-align: center;
+        font-size: 40px;
+      }
+      #typedname{
+        height: 50px;
+        font-size: 40px;
+      }
+      #startbutton{
+        height: 70px;
+        font-size: 40px;
+      }
       input{
         text-align: center;
       }

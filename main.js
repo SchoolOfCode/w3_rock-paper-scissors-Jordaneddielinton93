@@ -1,6 +1,7 @@
 function start(){
   document.getElementById("grid--popup").style.top = "10%";
   document.getElementById("grid--popup").style.bottom = "auto";
+  document.getElementById("grid--popup").style.height = "40px";
   document.getElementById("startbutton").style.display = "none";
   let typedname = document.getElementById("typedname").value + " VS COMPUTER"
   document.getElementById("nametag").innerHTML = typedname.toUpperCase();
