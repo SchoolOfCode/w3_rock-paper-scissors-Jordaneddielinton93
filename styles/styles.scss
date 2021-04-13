@@ -30,6 +30,7 @@ $reverse:linear-gradient(0deg, #6f8b20 0%, #6284FF 50%, #FF0000 100%);
 body{
   background-image: url(/images/paint.gif);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 .page-container{

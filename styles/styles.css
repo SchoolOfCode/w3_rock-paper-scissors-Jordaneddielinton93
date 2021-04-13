@@ -8,6 +8,7 @@
 body {
   background-image: url(/images/paint.gif);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
