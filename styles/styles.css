@@ -123,12 +123,12 @@ main .grid {
 }
 
 main .grid--popup {
-  width: 800px;
+  width: 400px;
   height: 200px;
   position: absolute;
   left: 50%;
   bottom: 20%;
-  margin-left: -400px;
+  margin-left: -200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,21 +151,6 @@ main .grid--popup {
 
 main .grid--popuph1 {
   display: flexbox;
-}
-
-main .grid--popup #nametag {
-  text-align: center;
-  font-size: 40px;
-}
-
-main .grid--popup #typedname {
-  height: 50px;
-  font-size: 40px;
-}
-
-main .grid--popup #startbutton {
-  height: 70px;
-  font-size: 40px;
 }
 
 main .grid--popup input {
