@@ -11,6 +11,7 @@ computerScore = 0
 // }
 
 function start(){
+  document.getElementById("nametag").style.display = "block"
   typedname = document.getElementById("typedname").value;
   let firstletter = typedname.slice(0,1)
   if(typedname.length < 10 && (/[a-zA-Z]/).test(firstletter)){
@@ -37,12 +38,14 @@ function start(){
 
 
 function winnerLooser(picked){
+  document.getElementById("nametag").style.display = "none"
   if(picked == "win"){
     document.getElementById("startscreen").style.display = "flex";
     document.getElementById("startscreen").style.backgroundImage = "url(/images/winner-comic.png)";
     document.getElementById("startbutton").style.display = "block";
     playerScore++
-    document.getElementById("playerScore").innerHTML = playerScore
+    document.getElementById("playerScore").innerHTML = playerScore;
+    
     
   }else if(picked == "lose"){
     document.getElementById("startscreen").style.display = "flex";
@@ -51,7 +54,7 @@ function winnerLooser(picked){
     computerScore++
     document.getElementById("compScore").innerHTML = computerScore
   }else{
-    
+    document.getElementById("nametag").style.display = "block"
   }
 };
 

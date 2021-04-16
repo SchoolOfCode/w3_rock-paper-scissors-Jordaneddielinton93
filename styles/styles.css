@@ -170,8 +170,19 @@ main .grid--popuph1 {
   display: flexbox;
 }
 
+main .grid--popup #nametag {
+  font-size: 2rem;
+  color: red;
+}
+
 main .grid--popup input {
   text-align: center;
+  height: 4vh;
+  font-size: 2rem;
+}
+
+main .grid--popup #startbutton {
+  font-size: 2rem;
 }
 
 main .grid--playerScreen {

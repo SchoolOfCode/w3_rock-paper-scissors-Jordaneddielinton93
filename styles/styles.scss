@@ -135,9 +135,17 @@ main{
       flex-direction:column;
       z-index: 2;
       background-color: white;
-
+      #nametag{
+        font-size: 2rem;
+        color: red;
+      }
       input{
         text-align: center;
+        height: 4vh;
+        font-size: 2rem;
+      }
+      #startbutton{
+        font-size: 2rem;
       }
     }
     &--playerScreen{
