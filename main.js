@@ -23,7 +23,7 @@ function winnerLooser(picked){
   }
 };
 
-    // this is a checker to see if the users choice matches the random generater or if it higher or lower. it also assigns a value to the hand images rock,paper or scissors.
+    // this is a checker to see if the users choice matches the random generater or if its higher or lower. it also assigns a value to the hand images rock,paper or scissors to show on the screen.
 function input(chosen){
   let random3numbs = Math.floor(Math.random()*3)+1;
   if(chosen == 1 ){

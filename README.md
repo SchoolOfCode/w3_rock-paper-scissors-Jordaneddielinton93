@@ -1,5 +1,7 @@
 # Rock, Paper, Scissors!
 
+[here is the link to a live server](https://optimistic-volhard-d68919.netlify.app/)
+
 Work through the tasks below **one by one**. Make sure you have completed each task before moving on to the next. Some steps will require you to change code you've already written.
 
 ## Task 1: Logic
