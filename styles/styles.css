@@ -28,6 +28,23 @@ body {
   border-right: solid thick red;
 }
 
+.page-container #scoreboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 960px;
+  z-index: 10;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page-container #scoreboard h2 {
+  display: inline;
+  color: white;
+}
+
 .header {
   display: flexbox;
   height: 10vh;

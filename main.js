@@ -1,23 +1,55 @@
+let typedname = null
+playerScore = 0
+computerScore = 0
+
+// for(i in typedname){
+//   if(i == 0){
+//     firstletter = typedname.charAt(i).toUpperCase();
+//     console.log(firstletter)
+    
+//   }
+// }
+
 function start(){
-  document.getElementById("grid--popup").style.top = "10%";
-  document.getElementById("grid--popup").style.bottom = "auto";
-  document.getElementById("grid--popup").style.height = "40px";
-  document.getElementById("startbutton").style.display = "none";
-  let typedname = document.getElementById("typedname").value + " VS COMPUTER"
-  document.getElementById("nametag").innerHTML = typedname.toUpperCase();
-  document.getElementById("typedname").style.display ="none"
-  document.getElementById("startscreen").style.display = "none"
+  typedname = document.getElementById("typedname").value;
+  let firstletter = typedname.slice(0,1)
+  if(typedname.length < 10 && (/[a-zA-Z]/).test(firstletter)){
+    
+    firstlettUpper = firstletter.toUpperCase();
+    typedname = typedname.replace(firstletter,firstlettUpper)
+    console.log(typedname)
+    document.getElementById("grid--popup").style.top = "10%";
+    document.getElementById("grid--popup").style.bottom = "auto";
+    document.getElementById("grid--popup").style.height = "40px";
+    document.getElementById("startbutton").style.display = "none";
+    document.getElementById("playername").innerText = typedname +"'s"
+    typedname= typedname + " VS Computer"
+    document.getElementById("nametag").innerHTML = typedname;
+    document.getElementById("typedname").style.display ="none"
+    document.getElementById("startscreen").style.display = "none"
+
+  }else{
+    alert("username has to be letters & less then 10")
+  }
 }
+
+
+
 
 function winnerLooser(picked){
   if(picked == "win"){
     document.getElementById("startscreen").style.display = "flex";
     document.getElementById("startscreen").style.backgroundImage = "url(/images/winner-comic.png)";
     document.getElementById("startbutton").style.display = "block";
+    playerScore++
+    document.getElementById("playerScore").innerHTML = playerScore
+    
   }else if(picked == "lose"){
     document.getElementById("startscreen").style.display = "flex";
     document.getElementById("startscreen").style.backgroundImage = "url(/images/looser.png)";
     document.getElementById("startbutton").style.display = "block";
+    computerScore++
+    document.getElementById("compScore").innerHTML = computerScore
   }else{
     
   }
