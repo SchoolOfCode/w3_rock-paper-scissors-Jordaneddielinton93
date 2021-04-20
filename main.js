@@ -19,9 +19,10 @@ function start(){
     firstlettUpper = firstletter.toUpperCase();
     typedname = typedname.replace(firstletter,firstlettUpper)
     console.log(typedname)
-    document.getElementById("grid--popup").style.top = "10%";
-    document.getElementById("grid--popup").style.bottom = "auto";
-    document.getElementById("grid--popup").style.height = "40px";
+    let gridPopUp = document.getElementById("grid--popup")
+    gridPopUp.style.top = "10%";
+    gridPopUp.style.bottom = "auto";
+    gridPopUp.style.height = "40px";
     document.getElementById("startbutton").style.display = "none";
     document.getElementById("playername").innerText = typedname +"'s"
     typedname= typedname + " VS Computer"
@@ -40,16 +41,17 @@ function start(){
 function winnerLooser(picked){
   document.getElementById("nametag").style.display = "none"
   if(picked == "win"){
-    document.getElementById("startscreen").style.display = "flex";
-    document.getElementById("startscreen").style.backgroundImage = "url(/images/winner-comic.png)";
+    let startscreen = document.getElementById("startscreen")
+    startscreen.style.display = "flex";
+    startscreen.style.backgroundImage = "url(/images/winner-comic.png)";
     document.getElementById("startbutton").style.display = "block";
     playerScore++
     document.getElementById("playerScore").innerHTML = playerScore;
     
     
   }else if(picked == "lose"){
-    document.getElementById("startscreen").style.display = "flex";
-    document.getElementById("startscreen").style.backgroundImage = "url(/images/looser.png)";
+    startscreen.style.display = "flex";
+    startscreen.style.backgroundImage = "url(/images/looser.png)";
     document.getElementById("startbutton").style.display = "block";
     computerScore++
     document.getElementById("compScore").innerHTML = computerScore
