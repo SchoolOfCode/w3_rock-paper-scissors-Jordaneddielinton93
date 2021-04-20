@@ -1,8 +1,9 @@
 # ROCK, PAPER , SCISSORS
 
-here is the[ link to the live server](https://optimistic-volhard-d68919.netlify.app/)
+# **Here is the[ link to the live server](https://optimistic-volhard-d68919.netlify.app/)**  
+incase you did not want to download it!
 
-Realised I did not do a Read ME for this game.
+
 
 ---
 
