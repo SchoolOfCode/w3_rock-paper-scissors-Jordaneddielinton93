@@ -1,7 +1,8 @@
 let typedname = null
 playerScore = 0
 computerScore = 0
-
+resettingScore = false
+resettingCScore = false
 function reset() {
   document.getElementById("playerScore").innerText = 0
   document.getElementById("compScore").innerText = 0
@@ -15,6 +16,8 @@ function reset() {
   let typedname = document.getElementById("typedname").value;
   document.getElementById("typedname").style.display ="block"
   document.getElementById("startscreen").style.display = "none"
+  resettingScore = true
+  resettingCScore = true
 }
 
 
@@ -85,6 +88,11 @@ function winnerLooser(picked){
     startscreen.display = "flex";
     startscreen.backgroundImage = "url(/images/winner-comic.png)";
     document.getElementById("startbutton").style.display = "block";
+    if(resettingScore == true){
+      playerScore = 0
+      resettingScore = false
+    }
+
     playerScore++
     document.getElementById("playerScore").innerHTML = playerScore;
   // if you loose tell you you're a looser
@@ -92,7 +100,12 @@ function winnerLooser(picked){
     startscreen.style.display = "flex";
     startscreen.style.backgroundImage = "url(/images/looser.png)";
     document.getElementById("startbutton").style.display = "block";
+    if(resettingCScore == true){
+      computerScore = 0
+      resettingCScore = false
+    }
     computerScore++
+    console.log(computerScore)
     document.getElementById("compScore").innerHTML = computerScore
   }else{
     document.getElementById("nametag").style.display = "block"
