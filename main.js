@@ -2,7 +2,16 @@ let typedname = null
 playerScore = 0
 computerScore = 0
 
+function reset() {
+  document.getElementById("playerScore").innerText = 0
+  document.getElementById("compScore").innerText = 0
+}
+
+
 function start(){
+  resetbutton = document.querySelector(".resetgame").style.display = "none"
+  document.getElementById("playerscreen").style.backgroundImage ="none"
+  document.getElementById("computerscreen").style.backgroundImage ="none"
   // starts game asigns a name
   document.getElementById("nametag").style.display = "block"
   let typedname = document.getElementById("typedname").value;
@@ -11,7 +20,6 @@ function start(){
     firstlettUpper = firstletter.toUpperCase();
     typedname = typedname.replace(firstletter,firstlettUpper)
     // ------------------------
-    // gridpop is the popupbox
     let popupbox = document.getElementById("grid--popup").style
     popupbox.top = "10%";
     popupbox.bottom = "auto";
@@ -30,6 +38,7 @@ function start(){
 
     // this is a checker to see if the users choice matches the random generater or if its higher or lower. it also assigns a value to the playerhand images e:g rock,paper,scissors to show on the screen.
 function input(chosen){
+  resetbutton = document.querySelector(".resetgame").style.display = "block"
   let computer = Math.floor(Math.random()*3)+1;
   let playerhand = document.getElementById("playerscreen").style
   let computerhand = document.getElementById("computerscreen").style
@@ -59,6 +68,7 @@ function input(chosen){
 }
 function winnerLooser(picked){
   document.getElementById("nametag").style.display = "none"
+  document.getElementById("grid--popup").style.height= "auto"
   // if you win tell you you're a winner
   if(picked == "win"){
     let startscreen = document.getElementById("startscreen").style
@@ -76,6 +86,7 @@ function winnerLooser(picked){
     document.getElementById("compScore").innerHTML = computerScore
   }else{
     document.getElementById("nametag").style.display = "block"
+    resetbutton = document.querySelector(".resetgame").style.display = "none"
   }
 };
 

@@ -94,10 +94,11 @@ main{
   #startscreen{
     display: flex;
     position: absolute;
-    height: 90vh;
+    height: 60vh;
     width: 960px;
+    bottom: 0;
     background: url(/images/paper.gif) no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     justify-content: center;
     align-items: center;
@@ -148,6 +149,13 @@ main{
       }
       #startbutton{
         font-size: 2rem;
+        width: 100%;
+      }
+      .resetgame{
+        display: none;
+        font-size: 2rem;
+        width: 100%;
+
       }
     }
     &--playerScreen{

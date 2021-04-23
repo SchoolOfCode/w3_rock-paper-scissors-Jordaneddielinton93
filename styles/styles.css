@@ -97,10 +97,11 @@ main #startscreen {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  height: 90vh;
+  height: 60vh;
   width: 960px;
+  bottom: 0;
   background: url(/images/paper.gif) no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -183,6 +184,13 @@ main .grid--popup input {
 
 main .grid--popup #startbutton {
   font-size: 2rem;
+  width: 100%;
+}
+
+main .grid--popup .resetgame {
+  display: none;
+  font-size: 2rem;
+  width: 100%;
 }
 
 main .grid--playerScreen {
