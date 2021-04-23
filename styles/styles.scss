@@ -1,4 +1,7 @@
 
+
+// I USE LIVE SASS COMPILER EXTENTION for css
+
 $greenbluered:linear-gradient(180deg, #6f8b20 0%, #6284FF 50%, #FF0000 100%);
 $reverse:linear-gradient(0deg, #6f8b20 0%, #6284FF 50%, #FF0000 100%);
 @mixin flex {
@@ -18,7 +21,6 @@ $reverse:linear-gradient(0deg, #6f8b20 0%, #6284FF 50%, #FF0000 100%);
     background-color: fuchsia;
     opacity: 0.5;
     transition: 2s;
-    
   }
 
 }
