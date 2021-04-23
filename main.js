@@ -5,6 +5,16 @@ computerScore = 0
 function reset() {
   document.getElementById("playerScore").innerText = 0
   document.getElementById("compScore").innerText = 0
+  let popupbox = document.getElementById("grid--popup").style
+  popupbox.bottom = "20%"
+  popupbox.top = "60%"
+  let nametag = document.getElementById("nametag")
+  nametag.style.display = "block";
+  nametag.innerHTML = "Type Your Name";
+  resetbutton = document.querySelector(".resetgame").style.display = "none"
+  let typedname = document.getElementById("typedname").value;
+  document.getElementById("typedname").style.display ="block"
+  document.getElementById("startscreen").style.display = "none"
 }
 
 
