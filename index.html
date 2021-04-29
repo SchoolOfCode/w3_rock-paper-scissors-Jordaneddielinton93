@@ -2,8 +2,57 @@
 <html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <title>Rock, Paper, Scissors</title>
   </head>
-  <body></body>
+  <body>
+    <div class="page-container">
+
+      <div id="scoreboard">
+        <h2><span id="playername">Player</span> score <span id="playerScore"></span></h2>
+        <h2>Computer score <span id="compScore"></span></h2>
+      </div>
+
+      <header class="header">
+        <div class="header--logo">
+          <ul>
+            <li>ROCK</li>
+            <li>PAPER</li>
+            <li>SCISSORS</li>
+          </ul>
+        </div>
+      </header>
+
+      <main>
+        <div id="startscreen"></div>
+
+        <div class="grid">
+          <!-- i could have used a query selector here instead of getElementById to grab the class -->
+          <div class="grid--popup" id="grid--popup">
+
+            <H2 id="nametag">Type Your Name</H2>
+
+            <input type="text" placeholder="less then 10 charset" id="typedname" value="player1">
+
+            <button id="startbutton" onclick="start()">
+              <h2>START GAME</h2>
+            </button>
+            <button class="resetgame" onclick="reset()">
+              <h2>Reset</h2>
+            </button>
+            
+          </div>
+
+
+          <div class="grid--playerScreen" id="playerscreen"></div>
+          <div class="grid--computerScreen" id="computerscreen"></div>
+          <div class="grid--rockButton" onclick="input(1)"><h1>ROCK</h1></div>
+          <div class="grid--paperButton"onclick="input(2)"><h1>PAPER</h1></div>
+          <div class="grid--scissorsButton" onclick="input(3)"><h1>SCISSORS</h1></div>
+          <div class="grid--playAgain"></div>
+        </div>
+      </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>

@@ -1,0 +1,199 @@
+
+
+// I USE LIVE SASS COMPILER EXTENTION for css
+
+$greenbluered:linear-gradient(180deg, #6f8b20 0%, #6284FF 50%, #FF0000 100%);
+$reverse:linear-gradient(0deg, #6f8b20 0%, #6284FF 50%, #FF0000 100%);
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  &h1{
+    display: flexbox;
+  }
+}
+@mixin hovergriadiant {
+  &:hover{
+    background-image:none;
+    background-color: fuchsia;
+    opacity: 0.5;
+    transition: 2s;
+  }
+
+}
+*{
+  padding: 0%;
+  margin: 0%;
+  text-decoration: 0;
+}
+body{
+  background-image: url(/images/paint.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.page-container{
+  display: flex;
+  flex-direction: column;
+  width: 960px;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: solid thick red;
+  border-right: solid thick red;
+  #scoreboard{
+    display: flex;
+    position: absolute;
+    width: 960px;
+    z-index: 10;
+    justify-content: space-between;
+    h2{
+      display: inline;
+      color:white ;
+    }
+  }
+
+}
+.header{
+  display: flexbox;
+  height: 10vh;
+  width: 100%;
+  &::before{
+    height: 10vh;
+    width: 960px;
+    opacity: 0.5;
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(90deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+  }
+
+  &--logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    ul{
+      display: flexbox;
+      li{
+        display: inline;
+        font-size: 2rem;
+        margin-left: 50px;
+        color: white;
+      }
+    }
+  }
+}
+main{
+  display: flexbox;
+  height: 90vh;
+  width: 100%;
+  #startscreen{
+    display: flex;
+    position: absolute;
+    height: 60vh;
+    width: 960px;
+    bottom: 0;
+    background: url(/images/paper.gif) no-repeat;
+    background-size: contain;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: 2s;
+    &:hover{
+      opacity: 0.2;
+    }
+    h2{
+      display: flexbox;
+      width: 300px;
+      height: 300px;
+      background-image: url();
+      background-repeat: no-repeat;
+      background-size: contain;
+      text-align: center;
+      
+    }
+  }
+  .grid{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 2fr ;
+    grid-template-areas: 
+    "box1 box1 box2 box2"
+    "box3 box4 box4 box5";
+    &--popup{
+      width: 400px;
+      height: 200px;
+      position: absolute;
+      left: 50%;
+      bottom: 20%;
+      margin-left: -200px;
+      @include flex();
+      flex-direction:column;
+      z-index: 2;
+      background-color: white;
+      #nametag{
+        font-size: 2rem;
+        color: red;
+      }
+      input{
+        text-align: center;
+        height: 4vh;
+        font-size: 2rem;
+      }
+      #startbutton{
+        font-size: 2rem;
+        width: 100%;
+      }
+      .resetgame{
+        display: none;
+        font-size: 2rem;
+        width: 100%;
+
+      }
+    }
+    &--playerScreen{
+      grid-area: box1;
+      @include flex();
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-right: none;
+    }
+    &--computerScreen{
+      grid-area: box2;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include flex();
+      border-left: none;
+    }
+    &--rockButton{
+      grid-area: box3;
+      @include flex();
+      background-image: $greenbluered;
+      @include hovergriadiant();
+      transition: 5s;
+    }
+    &--paperButton{
+      grid-area: box4;
+      @include flex();
+      background-image: $greenbluered;
+      @include hovergriadiant();
+      transition: 5s;
+    }
+    &--scissorsButton{
+      grid-area: box5;
+      @include flex();
+      background-image: $greenbluered;
+      @include hovergriadiant();
+      transition: 5s;
+    }
+  }
+}
